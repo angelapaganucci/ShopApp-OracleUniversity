@@ -17,6 +17,8 @@ public class ShopApp {
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
 
+        Clothing[] itens = {item1, item2};
+
         item1.description = "Blue Jacket";
         item1.price = 20.9;
         item1.size = "M";
