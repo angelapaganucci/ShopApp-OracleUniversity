@@ -3,13 +3,14 @@ package duke.choice;
 public class ShopApp {
     public static void main(String[] args) {
 
-        double tax = 0.2, total = 0.0;
+        double tax = 0.2, total;
 
         System.out.println("Welcome to Duck Choice Shop");
 
         Customer c1 = new Customer();
 
         c1.name = "Pinky";
+        c1.size = "S";
 
         System.out.println("Customer is " + c1.name);
 
@@ -31,5 +32,26 @@ public class ShopApp {
 
         System.out.println("Total = " + total);
 
+        int measurement = 3;
+
+        switch (measurement) {
+            case 1:
+            case 2:
+            case 3:
+                c1.size = "S";
+                break;
+            case 4:
+            case 5:
+            case 6:
+                c1.size = "M";
+                break;
+            case 7:
+            case 8:
+            case 9:
+                c1.size = "L";
+                break;
+            default:
+                c1.size = "X";
+        }
     }
 }
