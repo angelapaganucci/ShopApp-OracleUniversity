@@ -3,7 +3,8 @@ package duke.choice;
 public class ShopApp {
     public static void main(String[] args) {
 
-        double tax = 0.2, total;
+        double tax = 0.2;
+        double total = 0.0;
 
         System.out.println("Welcome to Duck Choice Shop");
 
@@ -17,7 +18,7 @@ public class ShopApp {
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
 
-        Clothing[] itens = {item1, item2};
+        Clothing[] items = {item1, item2};
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -27,12 +28,10 @@ public class ShopApp {
         item2.price = 10.5;
         item2.size = "S";
 
-        System.out.println("Item 1, " + item1.description + ", " + item1.price + ", " + item1.size);
-        System.out.println("Item 2, " + item2.description + ", " + item2.price + ", " + item2.size);
+//       System.out.println("Item 1, " + item1.description + ", " + item1.price + ", " + item1.size);
+//       System.out.println("Item 2, " + item2.description + ", " + item2.price + ", " + item2.size);
 
-        total = (item1.price + item2.price * 2) * (1 + tax);
-
-        System.out.println("Total = " + total);
+//       total = (item1.price + item2.price * 2) * (1 + tax);
 
         int measurement = 3;
 
@@ -55,5 +54,12 @@ public class ShopApp {
             default:
                 c1.size = "X";
         }
+
+        for (Clothing item : items){
+            total = total + item.price;
+            System.out.println("Item, " + item.description + ", " + item.price + ", " + item.size);
+        }
+        System.out.println("Total = " + total);
+
     }
 }
