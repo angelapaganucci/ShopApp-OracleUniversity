@@ -13,7 +13,7 @@ public class ShopApp {
         c1.setName("Pinky");
         c1.setSize("S");
 
-        System.out.println("Customer is " + c1.getName());
+        System.out.println("Customer is " + c1.getName() + "," + c1.getSize());
 
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
@@ -43,25 +43,7 @@ public class ShopApp {
 
         int measurement = 3;
 
-        switch (measurement) {
-            case 1:
-            case 2:
-            case 3:
-                c1.setSize("S");
-                break;
-            case 4:
-            case 5:
-            case 6:
-                c1.setSize("M");
-                break;
-            case 7:
-            case 8:
-            case 9:
-                c1.setSize("L");
-                break;
-            default:
-                c1.setSize("X");
-        }
+        c1.setSize(measurement);
 
         for (Clothing item : items){
             if(c1.getSize().equals(item.getSize())){
